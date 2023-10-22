@@ -14,6 +14,16 @@ namespace TestesUnitarios.Desafio.Console.Services
             return contem;
         }
 
+        public bool ListaNaoPodeConterDeterminadoNumero(List<int> lista, int numero)
+        {
+            var contemONumero = lista.Contains(numero);
+            if (contemONumero == false)
+            {
+                return !contemONumero;
+            }
+            return false;
+        }
+
         public List<int> MultiplicarNumerosLista(List<int> lista, int numero)
         {
             var listaMultiplicada = lista.Select(x => x * numero).ToList();
